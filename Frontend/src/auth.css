@@ -1,0 +1,89 @@
+body {
+    background-image: url(../public/login.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(149, 224, 246, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Quicksand";
+}
+form {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(12px);
+    padding: 6rem 5rem;
+    backdrop-filter: blur(3rem);
+    border-color: rgba(39, 39, 39, 0.158);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top:5rem;
+}
+input{
+    display: block;
+    height: 1.9rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    font-family: "Quicksand";
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    color:rgb(0, 0, 0)
+}
+input::placeholder{
+    color:rgb(0, 0, 0);
+    opacity: 1;
+}
+input:focus{
+    outline: none;
+}
+#submit-btn{
+    margin-top: 1.7rem;
+    border: black solid 1px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 1.5rem;
+    display: block;
+    width: fit-content;
+    margin:auto;
+    padding: 0.1rem 1rem;
+    font-family: "Quicksand";
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; 
+}
+#submit-btn:hover{
+   cursor: pointer;
+  color: rgb(0, 0, 0);
+  
+  /* 1. Pulls the crisp background image into the button area */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Crucial: aligns it perfectly with the body */
+  
+  /* 2. Optional: Adds a slight tint so the user knows they are hovering */
+  background-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.1); 
+  
+  /* 3. Adds a subtle shadow to separate it from the blurred form */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+#toggle-btn{
+    display: block;
+    margin-top: 0.7rem;
+    background-color: transparent;
+    border: none;
+    font-family: "Quicksand";
+    font-size: 1rem;
+    color: rgb(20, 18, 18);
+    text-align: center;
+    width: 15rem;
+    font-weight: 500;
+}

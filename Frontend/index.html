@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Iceland&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="main-header">
+        <a type="button" class="log-in" href="auth.html">Log in</a>
+      </header>
+      <div class="messenger-wrapper">
+        <aside class="sidebar">
+          <h3>Chats</h3>
+          <form id="add-friend">
+            <input class="add-friend-input" type="text" name="friend-name" />
+            <button class="add-friend-btn" type="submit">Add</button>
+          </form>
+          <ul class="friend-request"></ul>
+          <ul class="chat-list">
+            <!-- Chat items will be dynamically inserted here -->
+          </ul>
+        </aside>
+        <main class="chat-area">
+          <div class="chat-header"></div>
+          <div id="message-container" class="message-container"></div>
+          <form class="message-form">
+            <input
+              type="text"
+              id="message-input"
+              placeholder="Type your message here..."
+              name="message"
+              autocomplete="off"
+            />
+            <button id="send-button" type="submit">Send</button>
+          </form>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

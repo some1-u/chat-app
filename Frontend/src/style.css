@@ -1,0 +1,147 @@
+html, body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Iceland", Arial, sans-serif;
+  overflow: hidden;
+  background-image: url(../public/login.jpg);
+     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(149, 224, 246, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem 1rem;
+}
+.app-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.log-in {
+  background-color: rgb(210,242,255);
+  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  margin-left: auto;
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+}
+.messenger-wrapper {
+  display: flex;
+  height: calc(100vh - 0px);
+  margin-bottom: 4rem;
+  padding: 2rem 2rem 4rem;
+  gap: 1rem;
+}
+.sidebar {
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 20%;
+  height: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #0c2c14;
+}
+.chat-area {
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  flex: 1;;
+  margin-left: auto;
+  margin-bottom: 2rem;
+  padding: 2rem 2.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  color: #0c2c14;
+  height: 60%;
+}
+.message-container {
+  flex: 1;
+  color: #0c2c14;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.message-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+#message-input {
+  flex: 1;
+  border: none;
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.3);
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #0c2c14;
+  outline: none;
+}
+#send-button {
+  border: none;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.55);
+  color: #eafff0;
+  padding: 1rem 2.2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.message {
+  background: rgba(255,255,255,0.3);
+  color: #0c2c14;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0,0,0,0.15);
+  max-width: 70%;
+  word-wrap: break-word;
+  margin: 0.3rem 0;
+}
+.my-message {
+  background: rgba(0,0,0,0.55);
+  color: #eafff0;
+  align-self: flex-end;
+  border-bottom-right-radius: 0.2rem;
+}
+.add-friend-btn {
+  background: rgba(0,0,0,0.55);
+  color: #eafff0;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.add-friend-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.5);
+  width: 15rem;
+  font-size: 1rem;
+  padding: 0.1rem 0;
+  color: #0c2c14;
+}
+.chat-list-item, .friend-request-item {
+  padding: 0.3rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  color: #0c2c14;
+  border-radius: 0.5rem;
+  margin: 0.2rem 0;
+}
+.chat-list-item:hover, .active-chat {
+  background: rgba(255,255,255,0.2);
+}
