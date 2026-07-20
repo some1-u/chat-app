@@ -19,7 +19,7 @@ const io = new Server(server, {
   },
 });
 app.use("/auth", authRouter);
-app.use("/user",userRouter)
+app.use("/user", userRouter);
 const userSockets = {};
 
 io.on("connection", (socket) => {
@@ -55,6 +55,8 @@ io.on("connection", (socket) => {
     console.log("user disconnected");
   });
 });
-server.listen("3000", () => {
-  console.log("Server is running on Port 3000");
+const PORT = process.env.PORT || 3000;
+
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on port ${PORT}`);
 });
