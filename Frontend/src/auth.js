@@ -35,7 +35,7 @@ toggleBtn.addEventListener("click", (e) => {
 async function login(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const res = await fetch("chat-app-production-6d17.up.railway.app/auth/login", {
+  const res = await fetch("-production-6d17.up.railway.app/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -57,7 +57,7 @@ async function login(e) {
 async function signup(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const res = await fetch("chat-app-production-6d17.up.railway.app/auth/signup", {
+  const res = await fetch("https://chat-app-production-6d17.up.railway.app/auth/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -82,7 +82,7 @@ window.addEventListener("load", async () => {
   if (!user) {
     return;
   }
-  const res = await fetch("chat-app-production-6d17.up.railway.app/auth/verify", {
+  const res = await fetch("https://chat-app-production-6d17.up.railway.app/auth/verify", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
