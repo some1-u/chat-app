@@ -1,6 +1,6 @@
 import "./style.css";
 import { io } from "socket.io-client";
-const socket = io("chat-app-production-6d17.up.railway.app");
+const socket = io("https://chat-app-production-6d17.up.railway.app");
 let user;
 let currentRoom = null;
 
@@ -83,7 +83,7 @@ window.addEventListener("load", async () => {
   populateFriendList(user.id);
   populateFriendReqList(user.id);
 
-  const res = await fetch("chat-app-production-6d17.up.railway.app/auth/verify", {
+  const res = await fetch("https://chat-app-production-6d17.up.railway.app/auth/verify", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -118,7 +118,7 @@ friendForm.addEventListener("submit", async (e) => {
         userId: userDetails.id,
       });
       console.log(jsonBody);
-      const res = await fetch("chat-app-production-6d17.up.railway.app/user/friend", {
+      const res = await fetch("https://chat-app-production-6d17.up.railway.app/user/friend", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -136,7 +136,7 @@ friendForm.addEventListener("submit", async (e) => {
 });
 async function populateFriendList(id) {
   chatlist.innerHTML = "";
-  const res = await fetch("chat-app-production-6d17.up.railway.app/user/friend?userId=" + id);
+  const res = await fetch("https://chat-app-production-6d17.up.railway.app/user/friend?userId=" + id);
   const jsonres = await res.json();
   if (res.status === 200) {
     jsonres.data.map((friend) => {
@@ -162,7 +162,7 @@ async function populateFriendReqList(id) {
   const friendReqList = document.querySelector(".friend-request");
   friendReqList.innerHTML = "";
   const res = await fetch(
-    "chat-app-production-6d17.up.railway.app/user/friend-request?userId=" + id
+    "https://chat-app-production-6d17.up.railway.app/user/friend-request?userId=" + id
   );
   const jsonres = await res.json();
   if (res.status === 200) {
@@ -174,7 +174,7 @@ async function populateFriendReqList(id) {
       li.classList.add("friend-request-item");
       accept.addEventListener("click", async (e) => {
         e.preventDefault();
-        const res = await fetch(`chat-app-production-6d17.up.railway.app/user/friend-request`, {
+        const res = await fetch(`https://chat-app-production-6d17.up.railway.app/user/friend-request`, {
           method: "PATCH",
           headers: {
             "Content-type": "application/json",
@@ -191,7 +191,7 @@ async function populateFriendReqList(id) {
       });
       decline.addEventListener("click", async (e) => {
         e.preventDefault();
-        const res = await fetch(`chat-app-production-6d17.up.railway.app/user/friend-request`, {
+        const res = await fetch(`https://chat-app-production-6d17.up.railway.app/user/friend-request`, {
           method: "DELETE",
           headers: {
             "Content-type": "application/json",
