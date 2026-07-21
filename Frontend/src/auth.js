@@ -35,7 +35,7 @@ toggleBtn.addEventListener("click", (e) => {
 async function login(e) {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const res = await fetch("-production-6d17.up.railway.app/auth/login", {
+  const res = await fetch("https://chat-app-production-6d17.up.railway.app/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
